@@ -10,6 +10,15 @@
 
 <!-- Navbar -->
     {% include 'navbar.html' %}
+    <br/>
+    <div class="container">
+        {% if messages %}
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+        {% endif %}
+    </div>
+
 
 {% block content %}
 
