@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+{% if form.errors %}
+
+<div class="alert alert-info" role="alert">
+
+<p>Theres was an error with your</p>
+</div>
+
+
+{% endif %}
+
+
+<h1>Register</h1>
+<form acton="{% url 'register' %}" method=POST>
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+
+    <br/>
+    <br/>
+   <button type="submit" class="btn btn-primary">Register</button>
+
+
+</form>
+
+
+
+{% endblock %}
